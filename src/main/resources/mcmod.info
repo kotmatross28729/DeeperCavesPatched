@@ -1,0 +1,30 @@
+[
+{
+"modid": ${modId},
+"name": ${modName},
+"description": "The Deeper Caves mod.
+
+This mod adds many levels of caves below the default Overworld.
+See http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/wip-mods/2350259-deeper-caves-go-beyond-the-void-early-alpha
+and http://www.minecraftforum.net/forums/minecraft-discussion/suggestions/2311624-deeper-caves-caves-going-more-than-2-kilometers for more info.
+
+",
+"version": ${modVersion},
+"mcversion": ${minecraftVersion},
+"logoFile": "",
+"url": "",
+"authorList": ["Valiec2019", "Walt_Disney_II"],
+"credits": "
+Idea: kittykattykat
+First mod attempt: Koopinatorthegreatest
+Story: DesinitDraco
+Glowing Compressed Redstone Ore: 89_Mods
+French Translation: Mazdallier
+Textures: MTX1996 and PD101
+Crystal Blocks and Shards: MTX1996
+",
+"parent": "",
+"screenshots": [],
+"dependencies": []
+}
+]
