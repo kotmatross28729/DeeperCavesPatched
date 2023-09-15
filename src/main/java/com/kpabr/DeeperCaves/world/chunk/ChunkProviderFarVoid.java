@@ -170,7 +170,7 @@ public class ChunkProviderFarVoid extends ChunkProviderGenerate implements IChun
                             {
                                 if (k2 * 8 + l2 >= b0)
                                 {
-                                    p_147424_3_[j3 += short1] = DeeperBlocks.deepStone;
+                                    p_147424_3_[j3 += short1] = Blocks.stone;
                                 }
                                 else if (k2 * 8 + l2 < b0)
                                 {
@@ -178,7 +178,7 @@ public class ChunkProviderFarVoid extends ChunkProviderGenerate implements IChun
                                 }
                                 else
                                 {
-                                    p_147424_3_[j3 += short1] = DeeperBlocks.deepStone;
+                                    p_147424_3_[j3 += short1] = Blocks.stone;
                                 }
                             }
 
@@ -224,7 +224,7 @@ public class ChunkProviderFarVoid extends ChunkProviderGenerate implements IChun
                     }
                     if (l1 >= 250 && l1 <= 255 && p_147422_3_[i2] == Blocks.bedrock)
                     {
-                    	p_147422_3_[i2] = DeeperBlocks.deepStone;
+                    	p_147422_3_[i2] = Blocks.stone;
                     }
                     if (l1 >= 247)
                     {

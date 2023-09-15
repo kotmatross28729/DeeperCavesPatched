@@ -31,8 +31,7 @@ public class BiomeGenDarkness extends BiomeGenBase
         this.biomeName = StatCollector.translateToLocal("biome.Darkness");
         this.temperature = 0.80F;
         this.setHeight(BiomeGenBase.height_LowHills);
-        //this.topBlock = Blocks.bedrock;
-        this.topBlock = Blocks.stone;
+        this.topBlock = Blocks.bedrock;
         this.theBiomeDecorator = new DeeperDecorator();
         this.theBiomeDecorator.treesPerChunk = 0;
         this.theBiomeDecorator.grassPerChunk = 0;

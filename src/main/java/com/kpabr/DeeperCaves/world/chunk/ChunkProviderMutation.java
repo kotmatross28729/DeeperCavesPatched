@@ -171,15 +171,15 @@ public class ChunkProviderMutation extends ChunkProviderGenerate implements IChu
                             {
                                 if ((d15 += d16) > 0.0D)
                                 {
-                                    p_147424_3_[j3 += short1] = DeeperBlocks.deepStone;
+                                    p_147424_3_[j3 += short1] = Blocks.stone;
                                 }
                                 else if (k2 * 8 + l2 < b0)
                                 {
-                                    p_147424_3_[j3 += short1] = DeeperBlocks.deepStone;
+                                    p_147424_3_[j3 += short1] = Blocks.stone;
                                 }
                                 else
                                 {
-                                    p_147424_3_[j3 += short1] = DeeperBlocks.deepStone;
+                                    p_147424_3_[j3 += short1] = Blocks.stone;
                                 }
                             }
 
@@ -222,11 +222,11 @@ public class ChunkProviderMutation extends ChunkProviderGenerate implements IChu
 
                     if (l1 <= 5 && p_147422_3_[i2] == Blocks.bedrock)
                     {
-                    	p_147422_3_[i2] = DeeperBlocks.deepStone;
+                    	p_147422_3_[i2] = Blocks.stone;
                     }
                     if (l1 >= 250 && l1 <= 255 && p_147422_3_[i2] == Blocks.bedrock)
                     {
-                    	p_147422_3_[i2] = DeeperBlocks.deepStone;
+                    	p_147422_3_[i2] = Blocks.stone;
                     }
                     if (l1 >= 102)
                     {
