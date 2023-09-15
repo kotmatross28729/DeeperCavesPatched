@@ -31,7 +31,7 @@ import java.util.Date;
 import com.kpabr.DeeperCaves.structure.StructureCaveVillage;
 import com.kpabr.DeeperCaves.structure.cavevillage.CaveVillage;
 public class DeeperOregen implements IWorldGenerator
-{   
+{
 	   @Override
        public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
        {
@@ -85,18 +85,18 @@ public class DeeperOregen implements IWorldGenerator
 		            }
 					else if (world.provider.dimensionId == DeeperCaves.worldgen.compressedDimID)
 					{
-		             		generateCompressed(world, random, chunkX * 16, chunkZ * 16);		
+		             		generateCompressed(world, random, chunkX * 16, chunkZ * 16);
 		            }
 					else if (world.provider.dimensionId == DeeperCaves.worldgen.crystalDimID)
 					{
-		             		generateCrystal(world, random, chunkX * 16, chunkZ * 16);	
+		             		generateCrystal(world, random, chunkX * 16, chunkZ * 16);
                     }
 					else if (world.provider.dimensionId == DeeperCaves.worldgen.mazeDimID)
 					{
                     		generateMaze(world, random, chunkX * 16, chunkZ * 16);
                     }
 					else if (world.provider.dimensionId == DeeperCaves.worldgen.dropDimID)
-					{ 
+					{
                     		generateDrop(world, random, chunkX * 16, chunkZ * 16);
 					}
                     else if (world.provider.dimensionId == 0)
@@ -104,12 +104,12 @@ public class DeeperOregen implements IWorldGenerator
                     		generateOverworld(world, random, chunkX * 16, chunkZ * 16);
                     }
        }
-      
+
        private void generateOverworld(World world, Random random, int x, int z)
        {
 
        }
-       
+
        private void generateDefault(World world, Random random, int x, int z)
        {
 
@@ -117,35 +117,35 @@ public class DeeperOregen implements IWorldGenerator
 
        private void generateDrop(World world, Random random, int x, int z)
        {
-    	   
+
     	   this.addOre(Blocks.gold_ore, world, random, x, z, 16, 16, 16, 8, 0, 256, Blocks.stone);
     	   this.addOre(Blocks.diamond_ore, world, random, x, z, 16, 16, 12, 2, 0, 256, Blocks.stone);
     	   this.addOre(Blocks.emerald_ore, world, random, x, z, 16, 16, 8, 1, 0, 256, Blocks.stone);
-           
+
        }
        private void generateMaze(World world, Random random, int x, int z)
        {
-    	   
-    	   this.addOre(DeeperCaves.blocks.silverOre, world, random, x, z, 16, 16, 4, 32, 0, 255, Blocks.stone);
+
+    	   //this.addOre(DeeperCaves.blocks.silverOre, world, random, x, z, 16, 16, 4, 32, 0, 255, Blocks.stone);
     	   this.addOre(DeeperCaves.blocks.rubyOre, world, random, x, z, 16, 16, 5, 35, 0, 255, Blocks.stone);
-           
+
        }
        private void generateCrystal(World world, Random random, int x, int z)
        {
-    	   
+
     	   this.addOre(DeeperCaves.blocks.sapphireOre, world, random, x, z, 16, 16, 4, 32, 0, 255, Blocks.stone);
     	   this.addOre(DeeperCaves.blocks.aquamarineOre, world, random, x, z, 16, 16, 9, 40, 0, 255, Blocks.stone);
     	   this.addOre(DeeperCaves.blocks.ametrineOre, world, random, x, z, 16, 16, 12, 4, 0, 255, Blocks.stone);
-    	   
+
     	   for(int i = 0; i<13; i++)
     	   {
     		   this.addOre(DeeperCaves.blocks.crystal, i, world, random, x, z, 16, 16, 15, 6, 0, 255, Blocks.stone);
     	   }
-           
+
        }
        private void generateCompressed(World world, Random random, int x, int z)
        {
-    	   
+
     	   this.addOre(DeeperCaves.blocks.ccoalOre, world, random, x, z, 16, 16, 15, 160, 0, 255, Blocks.stone);
     	   this.addOre(DeeperCaves.blocks.cironOre, world, random, x, z, 16, 16, 10, 130, 0, 255, Blocks.stone);
     	   this.addOre(DeeperCaves.blocks.cgoldOre, world, random, x, z, 16, 16, 8, 30, 0, 255, Blocks.stone);
@@ -155,23 +155,23 @@ public class DeeperOregen implements IWorldGenerator
     	   this.addOre(DeeperCaves.blocks.cemeraldOre, world, random, x, z, 16, 16, 3, 8, 0, 255, Blocks.stone);
     	   this.addOre(DeeperCaves.blocks.csapphireOre, world, random, x, z, 16, 16, 4, 32, 0, 255, Blocks.stone);
     	   this.addOre(DeeperCaves.blocks.caquamarineOre, world, random, x, z, 16, 16, 9, 40, 0, 255, Blocks.stone);
-    	   this.addOre(DeeperCaves.blocks.csilverOre, world, random, x, z, 16, 16, 4, 32, 0, 255, Blocks.stone);
+    	   //this.addOre(DeeperCaves.blocks.csilverOre, world, random, x, z, 16, 16, 4, 32, 0, 255, Blocks.stone);
     	   this.addOre(DeeperCaves.blocks.crubyOre, world, random, x, z, 16, 16, 5, 35, 0, 255, Blocks.stone);
-           
+
        }
        private void generateBedrockPlains(World world, Random random, int x, int z)
        {
-    	   
+
     	   this.addOre(DeeperCaves.blocks.fragmentedBedrock, world, random, x, z, 16, 16, 8, 4, 150, 255, Blocks.bedrock);
-           
+
        }
        private void generateNearNether(World world, Random random, int x, int z)
        {
-    	   
+
     	   this.addOre(Blocks.netherrack, world, random, x, z, 16, 16, 15, 180, 0, 255, Blocks.stone);
     	   this.addOre(Blocks.quartz_ore, world, random, x, z, 16, 16, 8, 55, 0, 255, Blocks.stone);
     	   this.addOre(Blocks.glowstone, world, random, x, z, 16, 16, 20, 60, 0, 255, Blocks.stone);
-           
+
        }
        private void generateLava(World world, Random random, int x, int z)
        {
@@ -182,17 +182,17 @@ public class DeeperOregen implements IWorldGenerator
     	   this.addOre(Blocks.flowing_lava, world, random, x, z, 16, 16, 1, 65, 0, 255, Blocks.stone);
 		   this.addOre(DeeperBlocks.incenditeOre, world, random, x, z, 16, 16, 3, 4, 0, 50, Blocks.stone);
 
-           
+
        }
        private void generateNearVoid(World world, Random random, int x, int z)
        {
-    	   
+
     	   this.addOre(DeeperCaves.blocks.tenebriumOre, world, random, x, z, 16, 16, 8, 8, 0, 255, Blocks.stone);
-           
+
        }
        private void generateDeepWorld(World world, Random random, int x, int z)
        {
-    	   
+
     	   this.addOre(Blocks.coal_ore, world, random, x, z, 16, 16, 15, 160, 0, 255, Blocks.stone);
     	   this.addOre(Blocks.iron_ore, world, random, x, z, 16, 16, 10, 130, 0, 255, Blocks.stone);
     	   this.addOre(Blocks.gold_ore, world, random, x, z, 16, 16, 8, 30, 0, 255, Blocks.stone);
@@ -200,11 +200,11 @@ public class DeeperOregen implements IWorldGenerator
     	   this.addOre(Blocks.redstone_ore, world, random, x, z, 16, 16, 8, 108, 0, 255, Blocks.stone);
     	   this.addOre(Blocks.diamond_ore, world, random, x, z, 16, 16, 8, 13, 0, 255, Blocks.stone);
     	   this.addOre(Blocks.emerald_ore, world, random, x, z, 16, 16, 3, 8, 0, 255, Blocks.stone);
-           
+
        }
        private void generateDarkness(World world, Random random, int x, int z)
        {
-    	   
+
     	   this.addOre(DeeperCaves.blocks.ddcoalOre, world, random, x, z, 16, 16, 15, 80, 0, 255, DeeperCaves.blocks.darkStone);
     	   this.addOre(DeeperCaves.blocks.ddironOre, world, random, x, z, 16, 16, 10, 65, 0, 255, DeeperCaves.blocks.darkStone);
     	   this.addOre(DeeperCaves.blocks.ddgoldOre, world, random, x, z, 16, 16, 8, 15, 0, 255, DeeperCaves.blocks.darkStone);
@@ -212,15 +212,15 @@ public class DeeperOregen implements IWorldGenerator
     	   this.addOre(DeeperCaves.blocks.ddredstoneOre, world, random, x, z, 16, 16, 8, 54, 0, 255, DeeperCaves.blocks.darkStone);
     	   this.addOre(DeeperCaves.blocks.dddiamondOre, world, random, x, z, 16, 16, 8, 7, 0, 255, DeeperCaves.blocks.darkStone);
     	   this.addOre(DeeperCaves.blocks.ddemeraldOre, world, random, x, z, 16, 16, 3, 4, 0, 255, DeeperCaves.blocks.darkStone);
-    	   
+
     	   this.addOre(DeeperCaves.blocks.vesperiteOre, world, random, x, z, 16, 16, 6, 80, 0, 255, DeeperCaves.blocks.darkStone);
-    	   
-           
+
+
        }
-       
+
        private void generateAbandonedCaves(World world, Random random, int x, int z)
        {
-    	   
+
     	   this.addOre(DeeperCaves.blocks.dcoalOre, world, random, x, z, 16, 16, 15, 80, 0, 255, DeeperCaves.blocks.abandonedStone);
     	   this.addOre(DeeperCaves.blocks.dironOre, world, random, x, z, 16, 16, 10, 65, 0, 255, DeeperCaves.blocks.abandonedStone);
     	   this.addOre(DeeperCaves.blocks.dgoldOre, world, random, x, z, 16, 16, 8, 15, 0, 255, DeeperCaves.blocks.abandonedStone);
@@ -228,7 +228,7 @@ public class DeeperOregen implements IWorldGenerator
     	   this.addOre(DeeperCaves.blocks.dredstoneOre, world, random, x, z, 16, 16, 8, 54, 0, 255, DeeperCaves.blocks.abandonedStone);
     	   this.addOre(DeeperCaves.blocks.ddiamondOre, world, random, x, z, 16, 16, 8, 7, 0, 255, DeeperCaves.blocks.abandonedStone);
     	   this.addOre(DeeperCaves.blocks.demeraldOre, world, random, x, z, 16, 16, 3, 4, 0, 255, DeeperCaves.blocks.abandonedStone);
-    	   
+
     	   if (random.nextInt(6) == 0) //TODO tweak?
            {
                int i = x + random.nextInt(16) + 8;
@@ -236,9 +236,9 @@ public class DeeperOregen implements IWorldGenerator
                int k = random.nextInt(60);
                (new CaveVillage()).generate(world, random, i, k, j);
            }
-           
+
        }
-       
+
        private void generateMutation(World world, Random random, int x, int z)
        {
     	   this.addOre(DeeperCaves.blocks.dpcoalOre, world, random, x, z, 16, 16, 15, 80, 0, 255, DeeperCaves.blocks.deepStone);
@@ -253,10 +253,10 @@ public class DeeperOregen implements IWorldGenerator
     		   this.addOre(DeeperCaves.blocks.crystal, i, world, random, x, z, 16, 16, 8, 4, 0, 255, DeeperCaves.blocks.deepStone);
     	   }
        }
-       
+
        private void generateFarVoid(World world, Random random, int x, int z)
        {
-    	   
+
     	   this.addOre(DeeperCaves.blocks.dccoalOre, world, random, x, z, 16, 16, 15, 4, 220, 235, DeeperCaves.blocks.deepStone);
     	   this.addOre(DeeperCaves.blocks.dcironOre, world, random, x, z, 16, 16, 10, 2, 220, 235, DeeperCaves.blocks.deepStone);
     	   this.addOre(DeeperCaves.blocks.dcgoldOre, world, random, x, z, 16, 16, 8, 1, 220, 235, DeeperCaves.blocks.deepStone);
@@ -270,11 +270,11 @@ public class DeeperOregen implements IWorldGenerator
     	   this.addOre(Blocks.end_stone, world, random, x, z, 16, 16, 15, 1, 128, 255, DeeperCaves.blocks.deepStone);
     	   this.addOre(DeeperCaves.blocks.dcsapphireOre, world, random, x, z, 16, 16, 4, 32, 0, 255, DeeperCaves.blocks.deepStone);
     	   this.addOre(DeeperCaves.blocks.dcaquamarineOre, world, random, x, z, 16, 16, 9, 40, 0, 255, DeeperCaves.blocks.deepStone);
-    	   this.addOre(DeeperCaves.blocks.dcsilverOre, world, random, x, z, 16, 16, 4, 32, 0, 255, DeeperCaves.blocks.deepStone);
+    	   //this.addOre(DeeperCaves.blocks.dcsilverOre, world, random, x, z, 16, 16, 4, 32, 0, 255, DeeperCaves.blocks.deepStone);
     	   this.addOre(DeeperCaves.blocks.dcrubyOre, world, random, x, z, 16, 16, 5, 35, 0, 255, DeeperCaves.blocks.deepStone);
-           
+
        }
-       
+
        private void generateForgotten(World world, Random random, int x, int z)
        {
     	   this.addOre(DeeperCaves.blocks.dpcoalOre, world, random, x, z, 16, 16, 15, 80, 0, 255, DeeperCaves.blocks.deepStone);
@@ -287,7 +287,7 @@ public class DeeperOregen implements IWorldGenerator
     	   this.addOre(DeeperCaves.blocks.evanesciteOre, world, random, x, z, 16, 16, 6, 180, 0, 255, DeeperCaves.blocks.deepStone);
 		   this.addOre(DeeperBlocks.prisciumOre, world, random, x, z, 16, 16, 6, 90, 0, 255, DeeperCaves.blocks.deepStone);
        }
-       
+
        private void generateEvil(World world, Random random, int x, int z)
        {
     	   this.addOre(DeeperCaves.blocks.soulStone, world, random, x, z, 16, 16, 25, 180, 0, 255, DeeperCaves.blocks.deepStone);
@@ -296,16 +296,16 @@ public class DeeperOregen implements IWorldGenerator
     	   this.addOre(DeeperCaves.blocks.profundiumOre, world, random, x, z, 16, 16, 6, 67, 0, 255, DeeperCaves.blocks.deepStone);
 		   this.addOre(DeeperBlocks.prisciumOre, world, random, x, z, 16, 16, 3, 50, 0, 255, DeeperCaves.blocks.deepStone);
        }
-       
-       
+
+
        private void generateFinalLabyrinth(World world, Random random, int x, int z)
-       { 
-    	   this.addOre(DeeperCaves.blocks.forgottenGemstoneOre, world, random, x, z, 16, 16, 4, 50, 0, 255, DeeperCaves.blocks.fragmentedBedrock); 
+       {
+    	   this.addOre(DeeperCaves.blocks.forgottenGemstoneOre, world, random, x, z, 16, 16, 4, 50, 0, 255, DeeperCaves.blocks.fragmentedBedrock);
        }
-       
+
        public void addOre(Block block, World world, Random random, int x, int z, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY, Block generateIn)
        {
-             int heightRange = maxY - minY;             
+             int heightRange = maxY - minY;
              WorldGenMinable worldgenminable = new WorldGenMinable(block, maxVeinSize, generateIn);
              for (int k1 = 0; k1 < chancesToSpawn; ++k1)
              {
@@ -317,7 +317,7 @@ public class DeeperOregen implements IWorldGenerator
        }
        public void addOre(Block block, int meta, World world, Random random, int x, int z, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY, Block generateIn)
        {
-             int heightRange = maxY - minY;             
+             int heightRange = maxY - minY;
              WorldGenMinable worldgenminable = new WorldGenMinable(block, meta, maxVeinSize, generateIn);
              for (int k1 = 0; k1 < chancesToSpawn; ++k1)
              {
@@ -328,7 +328,6 @@ public class DeeperOregen implements IWorldGenerator
              }
        }
 }
-       
-       
-       
-       
+
+
+

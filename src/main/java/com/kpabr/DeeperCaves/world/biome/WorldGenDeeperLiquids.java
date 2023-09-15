@@ -1,4 +1,3 @@
-/**
 package com.kpabr.DeeperCaves.world.biome;
 
 import java.util.Random;
@@ -98,4 +97,3 @@ public class WorldGenDeeperLiquids extends WorldGenLiquids
         }
     }
 }
-*/
